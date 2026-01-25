@@ -54,7 +54,7 @@ export default function ClientReviews() {
   );
 
   return (
-    <section className="section-pad bg-black">
+    <section className="section-pad bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
@@ -62,7 +62,7 @@ export default function ClientReviews() {
         </div>
 
         {/* Branding + Marquee */}
-        <div className="grid md:grid-cols-[280px_1fr] gap-8 items-start">
+        <div className="grid md:grid-cols-[280px_1fr] gap-8 items-start overflow-hidden">
           {/* Left Branding Block */}
           <div className="order-1 md:order-none bg-white text-black rounded-2xl p-6 shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
             <div className="flex items-center gap-3 mb-4">
