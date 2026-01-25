@@ -86,7 +86,7 @@ export default function ClientReviews() {
             <div className="marquee overflow-hidden group">
               <div className="marquee-track flex gap-6 items-stretch">
                 {marqueeData.map((r, idx) => (
-                  <div key={idx} className="min-w-[320px] max-w-[320px] bg-white text-black rounded-2xl p-5 shadow-[0_20px_40px_rgba(0,0,0,0.25)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.3)] transition-shadow">
+                  <div key={idx} className="min-w-[280px] md:min-w-[320px] max-w-[280px] md:max-w-[320px] bg-white text-black rounded-2xl p-5 shadow-[0_20px_40px_rgba(0,0,0,0.25)] hover:shadow-[0_24px_60px_rgba(0,0,0,0.3)] transition-shadow">
                     <div className="flex items-center gap-3 mb-3">
                       <img src={r.photo} alt={r.name} className="w-10 h-10 rounded-full object-cover border border-black/10" />
                       <div className="flex-1">

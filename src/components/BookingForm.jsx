@@ -72,8 +72,8 @@ export default function BookingForm() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Image */}
-          <div className="block">
-            <div className="relative h-96 rounded-2xl overflow-hidden border border-white/20 hover:border-orange/60 transition-all duration-300 group">
+          <div className="hidden md:block">
+            <div className="relative h-80 md:h-96 rounded-2xl overflow-hidden border border-white/20 hover:border-orange/60 transition-all duration-300 group">
               <img
                 src="/assets/Work/1 (1).JPEG"
                 alt="Tattoo artist at work"
