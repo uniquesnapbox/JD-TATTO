@@ -16,6 +16,8 @@ export default {
         darkblue: '#05007f',
       },
       fontFamily: {
+        heading: ['Bebas Neue', 'Impact', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
       boxShadow: {

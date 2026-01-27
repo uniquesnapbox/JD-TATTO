@@ -51,18 +51,18 @@ export default function About({ onBook }) {
     <div className="space-y-16 bg-black">
       <div className="section-pad max-w-6xl mx-auto space-y-10">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">About JD Tattoos Studio</h1>
-          <p className="text-white/70 text-lg md:text-xl">Silchar's premier destination for high-quality, artistic tattoos.</p>
+          <h1 className="font-heading text-5xl md:text-6xl uppercase tracking-wide text-white">About JD Tattoos Studio</h1>
+          <p className="font-body text-white/70 text-lg md:text-xl" style={{lineHeight: '1.5'}}>Silchar's premier destination for high-quality, artistic tattoos.</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <div className="card-surface p-8 border border-white/10 hover:border-orange/50 transition-all duration-300">
-            <h3 className="text-orange font-bold text-xl mb-3">Our Craft</h3>
-            <p className="text-white/80 leading-relaxed">We specialize in portraits and religious tattoos, delivering precise, meaningful art with premium hygiene standards. Our experienced artists bring your vision to life with exceptional attention to detail.</p>
+            <h3 className="font-heading text-orange text-2xl uppercase tracking-wide mb-3">Our Craft</h3>
+            <p className="font-body text-white/80" style={{lineHeight: '1.6'}}>We specialize in portraits and religious tattoos, delivering precise, meaningful art with premium hygiene standards. Our experienced artists bring your vision to life with exceptional attention to detail.</p>
           </div>
           <div className="card-surface p-8 border border-white/10 hover:border-orange/50 transition-all duration-300">
-            <h3 className="text-orange font-bold text-xl mb-3">Our Standards</h3>
-            <p className="text-white/80 leading-relaxed">Single-use needles, sterilized equipment, and imported inks to keep you safe while we create. Your health and safety are our top priorities in every session.</p>
+            <h3 className="font-heading text-orange text-2xl uppercase tracking-wide mb-3">Our Standards</h3>
+            <p className="font-body text-white/80" style={{lineHeight: '1.6'}}>Single-use needles, sterilized equipment, and imported inks to keep you safe while we create. Your health and safety are our top priorities in every session.</p>
           </div>
         </div>
 
@@ -79,9 +79,9 @@ export default function About({ onBook }) {
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 space-y-3">
-            <p className="text-orange font-bold text-sm tracking-[0.2em] uppercase">The Creative Minds Behind The Ink</p>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Meet Our Master Artists</h2>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-orange font-bold text-sm tracking-[0.2em] uppercase">The Creative Minds Behind The Ink</p>
+            <h2 className="font-heading text-5xl md:text-6xl uppercase tracking-wide text-white mb-4">Meet Our Master Artists</h2>
+            <p className="font-body text-white/70 text-lg max-w-2xl mx-auto" style={{lineHeight: '1.6'}}>
               At JD Tattoos, our artists don't just ink; they tell your stories through skin art. From hyper-realism to traditional masterpieces, meet the experts who bring your vision to life.
             </p>
           </div>

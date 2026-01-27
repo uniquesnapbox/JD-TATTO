@@ -54,12 +54,12 @@ export default function HeroSlider({ onBook }) {
       <div className="relative z-10 h-full">
         <div className="h-full max-w-6xl mx-auto grid md:grid-cols-[1.2fr_0.95fr] items-center gap-6 px-6 md:px-10 lg:px-12">
           <div className="space-y-4 md:space-y-5 animate-[revealUp_1s_ease_forwards] opacity-0 translate-y-6">
-            <p className="text-xs md:text-sm uppercase tracking-[0.3em] text-white/70">SILCHAR'S PREMIER TATTOO STUDIO</p>
-            <h1 className="leading-tight text-3xl md:text-5xl lg:text-6xl font-black drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]">
+            <p className="font-body text-xs md:text-sm uppercase tracking-[0.3em] text-white/70 font-semibold">SILCHAR'S PREMIER TATTOO STUDIO</p>
+            <h1 className="font-heading leading-none text-4xl md:text-6xl lg:text-7xl uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]" style={{letterSpacing: '2px'}}>
               <span className="block text-white md:text-[#f8f7ef]">Where Feelings Turn into</span>
               <span className="block text-[#39d67f]">Expression</span>
             </h1>
-            <p className="text-white/80 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="font-body text-white/80 text-base md:text-lg max-w-2xl" style={{lineHeight: '1.65'}}>
               Mastering portraits and religious tattoos with unmatched hygiene standards.
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4 pt-2">

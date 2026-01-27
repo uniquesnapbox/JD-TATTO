@@ -58,7 +58,7 @@ export default function ClientReviews() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="font-montserrat text-3xl md:text-4xl font-extrabold tracking-wide text-white">CLIENT REVIEWS</h2>
+          <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-wider text-white">Client Reviews</h2>
         </div>
 
         {/* Branding + Marquee */}
@@ -66,11 +66,11 @@ export default function ClientReviews() {
           {/* Left Branding Block */}
           <div className="order-1 md:order-none bg-white text-black rounded-2xl p-6 shadow-[0_20px_40px_rgba(0,0,0,0.25)]">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-extrabold">JD</div>
-              <div className="font-montserrat font-bold text-lg">JD Tattoos</div>
+              <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center font-heading text-lg">JD</div>
+              <div className="font-heading text-xl tracking-wide">JD Tattoos</div>
             </div>
-            <p className="text-sm text-black/70 mb-4">564 Google reviews</p>
-            <a href="https://share.google/DaBaKUiFwf8lu1lIV" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-black text-white font-bold px-5 py-3 rounded-lg hover:opacity-90">
+            <p className="font-body text-sm text-black/70 mb-4" style={{lineHeight: '1.5'}}>564 Google reviews</p>
+            <a href="https://share.google/DaBaKUiFwf8lu1lIV" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-black text-white font-heading font-bold px-5 py-3 rounded-lg hover:opacity-90 tracking-wide text-sm">
               <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
                 <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -90,8 +90,8 @@ export default function ClientReviews() {
                     <div className="flex items-center gap-3 mb-3">
                       <img src={r.photo} alt={r.name} className="w-10 h-10 rounded-full object-cover border border-black/10" />
                       <div className="flex-1">
-                        <div className="font-semibold">{r.name}</div>
-                        <div className="text-xs text-black/60">{r.date}</div>
+                        <div className="font-body font-semibold">{r.name}</div>
+                        <div className="font-body text-xs text-black/60">{r.date}</div>
                       </div>
                       <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -101,7 +101,7 @@ export default function ClientReviews() {
                       </svg>
                     </div>
                     <div className="mb-2"><Stars rating={r.rating} /></div>
-                    <p className="text-sm text-black/80 leading-relaxed">
+                    <p className="font-body text-sm text-black/80" style={{lineHeight: '1.6'}}>
                       "{r.text}"
                       <a href="#" className="text-[#ea700d] font-semibold ml-1">Read more</a>
                     </p>

@@ -20,10 +20,10 @@ export default function ArtistCard({ name, title, bio, image, instagram }) {
         <div className="absolute inset-0 flex items-end">
           <div className="w-full bg-gradient-to-t from-black/85 via-black/65 to-transparent px-5 pb-5 pt-10 text-left space-y-2">
             <div>
-              <p className="text-[11px] font-semibold text-orange uppercase mb-1">{title}</p>
-              <p className="text-lg font-black uppercase text-white drop-shadow">{name}</p>
+              <p className="font-body text-[11px] font-bold text-orange uppercase tracking-wide mb-1">{title}</p>
+              <p className="font-heading text-2xl uppercase text-white drop-shadow tracking-wide">{name}</p>
             </div>
-            <p className="text-white/85 text-sm leading-relaxed drop-shadow-sm">{bio}</p>
+            <p className="font-body text-white/85 text-sm drop-shadow-sm" style={{lineHeight: '1.5'}}>{bio}</p>
             <div className="flex justify-start">
               <a
                 href={instagram}

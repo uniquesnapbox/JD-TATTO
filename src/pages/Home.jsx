@@ -50,8 +50,8 @@ export default function Home({ onBook }) {
       <section className="section-pad bg-gradient-to-b from-black via-[#050505] to-black">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">Our Services</h2>
-            <p className="text-white/70 mt-3 text-lg">Pick your style, we will perfect it.</p>
+            <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-wide text-white">Our Services</h2>
+            <p className="font-body text-white/70 mt-3 text-lg" style={{lineHeight: '1.5'}}>Pick your style, we will perfect it.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, idx) => (
@@ -61,8 +61,8 @@ export default function Home({ onBook }) {
                 style={{ animationDelay: `${idx * 120}ms` }}
               >
                 <div className="text-2xl">{service.icon}</div>
-                <h3 className="text-lg font-semibold text-orange mt-3">{service.title}</h3>
-                <p className="text-white/70 text-sm mt-2 leading-relaxed">{service.desc}</p>
+                <h3 className="font-body text-lg font-semibold text-orange mt-3">{service.title}</h3>
+                <p className="font-body text-white/70 text-sm mt-2" style={{lineHeight: '1.5'}}>{service.desc}</p>
               </div>
             ))}
           </div>
@@ -72,8 +72,8 @@ export default function Home({ onBook }) {
       <section className="section-pad bg-black">
         <div className="max-w-7xl mx-auto text-center space-y-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Why Choose JD Tattoos?</h2>
-            <p className="text-white/70 mt-3 text-lg">Premium experience, safe practices, and master artists.</p>
+            <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-wide text-white">Why Choose JD Tattoos?</h2>
+            <p className="font-body text-white/70 mt-3 text-lg" style={{lineHeight: '1.5'}}>Premium experience, safe practices, and master artists.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {trust.map((item, idx) => (
@@ -83,8 +83,8 @@ export default function Home({ onBook }) {
                 style={{ animationDelay: `${idx * 120}ms` }}
               >
                 <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-xl text-orange">{item.title}</h3>
-                <p className="text-white/70 text-sm mt-2 leading-relaxed">{item.desc}</p>
+                <h3 className="font-heading text-2xl uppercase tracking-wide text-orange">{item.title}</h3>
+                <p className="font-body text-white/70 text-sm mt-2" style={{lineHeight: '1.5'}}>{item.desc}</p>
               </div>
             ))}
           </div>
