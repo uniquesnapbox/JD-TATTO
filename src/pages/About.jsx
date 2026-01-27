@@ -1,8 +1,54 @@
+import ArtistCard from '../components/ArtistCard';
 import GoogleReviews from '../components/GoogleReviews';
 
 export default function About({ onBook }) {
+  const artists = [
+    {
+      name: 'Pallab Dhar',
+      title: 'Founder & Lead Artist',
+      bio: 'With 10+ years of experience, Pallab specializes in hyper-realistic portraits and intricate designs. His passion for precision and artistic excellence defines JD Tattoos.',
+      image: '/assets/Team/1 (1).jpg',
+      instagram: 'https://instagram.com/',
+    },
+    {
+      name: 'Debraj Debnath',
+      title: 'Realism Specialist',
+      bio: 'Debraj\'s expertise in photorealistic tattoos brings out every detail and emotion. Specializing in black & grey realism, he transforms references into wearable art.',
+      image: '/assets/Team/1 (2).jpg',
+      instagram: 'https://instagram.com/',
+    },
+    {
+      name: 'Subinoy Sinha',
+      title: 'Piercing & PMU Expert',
+      bio: 'Subinoy brings precision and safety to every piercing and permanent makeup application. With certification in PMU techniques, he delivers stunning, lasting results.',
+      image: '/assets/Team/1 (3).jpg',
+      instagram: 'https://instagram.com/',
+    },
+    {
+      name: 'Rishav Kumar',
+      title: '3D Tattoo Specialist',
+      bio: 'Rishav masters the art of 3D designs, creating depth and perspective that brings tattoos to life. His innovative techniques set new standards in the industry.',
+      image: '/assets/Team/1 (4).jpg',
+      instagram: 'https://instagram.com/',
+    },
+    {
+      name: 'Priya Sharma',
+      title: 'PMU & Microblading Artist',
+      bio: 'Priya specializes in permanent makeup and microblading, creating natural-looking, long-lasting results. Her attention to facial symmetry ensures perfect brows every time.',
+      image: '/assets/Team/1 (5).jpg',
+      instagram: 'https://instagram.com/',
+    },
+    {
+      name: 'Aditya Singh',
+      title: 'Traditional & Cultural Tattoo Artist',
+      bio: 'Aditya\'s expertise in traditional and cultural tattoos brings heritage and meaning to skin. His meticulous work honors every design\'s story and significance.',
+      image: '/assets/Team/1 (6).jpg',
+      instagram: 'https://instagram.com/',
+    },
+  ];
+
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 bg-black">
       <div className="section-pad max-w-6xl mx-auto space-y-10">
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold text-white">About JD Tattoos Studio</h1>
@@ -27,6 +73,27 @@ export default function About({ onBook }) {
       </div>
 
       <GoogleReviews />
+
+      {/* Meet Our Artist Section */}
+      <section className="section-pad bg-black">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16 space-y-3">
+            <p className="text-orange font-bold text-sm tracking-[0.2em] uppercase">The Creative Minds Behind The Ink</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white mb-4">Meet Our Master Artists</h2>
+            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
+              At JD Tattoos, our artists don't just ink; they tell your stories through skin art. From hyper-realism to traditional masterpieces, meet the experts who bring your vision to life.
+            </p>
+          </div>
+
+          {/* Artist Grid: 2 col mobile, 3 col tablet, 4 col desktop */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {artists.map((artist) => (
+              <ArtistCard key={artist.name} {...artist} />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
