@@ -82,21 +82,6 @@ export default function Gallery() {
             </div>
           </div>
 
-          {/* Tablet: Medium Grid */}
-          <div className="hidden md:lg:grid grid-cols-3 gap-4 mb-12 place-items-center">
-            {images.map((img) => (
-              <PhotoView key={img.id} src={img.src}>
-                <div className="bg-white p-2 shadow-lg hover:shadow-xl transition-all hover:scale-105 cursor-pointer border-2 border-white/80">
-                  <img
-                    src={img.src}
-                    alt={`Tattoo work ${img.id}`}
-                    className="w-40 h-48 object-cover"
-                  />
-                </div>
-              </PhotoView>
-            ))}
-          </div>
-
           {/* Mobile: Vertical Grid Stack */}
           <div className="md:hidden grid grid-cols-2 gap-3 sm:gap-4 mb-8">
             {images.map((img) => (
@@ -112,21 +97,8 @@ export default function Gallery() {
             ))}
           </div>
 
-          {/* Preview Grid Section */}
-          <div className="hidden md:block bg-black/40 border border-white/10 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
-            <p className="text-center text-white/70 text-sm mb-4 font-semibold">Our Gallery</p>
-            <div className="grid grid-cols-3 gap-2 sm:gap-3">
-              {images.slice(0, 6).map((img) => (
-                <PhotoView key={img.id} src={img.src}>
-                  <img
-                    src={img.src}
-                    alt={`Thumbnail ${img.id}`}
-                    className="w-full h-20 sm:h-24 object-cover cursor-pointer border border-white/20 hover:border-orange/60 transition-colors rounded"
-                  />
-                </PhotoView>
-              ))}
-            </div>
-          </div>
+          {/* Preview Grid Section - Removed */}
+
         </PhotoProvider>
 
         {/* CTA Buttons */}
