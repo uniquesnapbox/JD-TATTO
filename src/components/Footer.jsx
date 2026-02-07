@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-3 text-sm text-white/80">
         <div className="space-y-4">
           <img
-            src="/assets/logo-BbpkOYpx.png"
+            src="/assets/white%20jd.png"
             alt="JD Tattoos Studio"
             className="h-14 w-auto object-contain"
           />

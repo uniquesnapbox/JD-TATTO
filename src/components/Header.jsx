@@ -20,7 +20,7 @@ export default function Header({ onBook }) {
       <div className="max-w-7xl mx-auto flex items-center justify-between py-3 px-4 md:px-6">
         <Link to="/" className="flex items-center">
           <img
-            src="/assets/logo-BbpkOYpx.png"
+            src="/assets/white%20jd.png"
             alt="JD Tattoos Studio"
             className="h-14 md:h-16 w-auto object-contain"
           />
