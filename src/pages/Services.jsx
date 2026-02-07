@@ -35,7 +35,7 @@ const services = [
 export default function Services({ onBook }) {
   return (
     <>
-    <div className="section-pad max-w-7xl mx-auto">
+    <div className="section-pad max-w-7xl mx-auto" style={{backgroundColor: '#000a1a'}}>
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-white">Our Services</h1>
         <p className="text-white/70 mt-4 text-lg">Pick your style, we will perfect it.</p>

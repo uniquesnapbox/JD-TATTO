@@ -8,7 +8,7 @@ export default function HeroSlider({ onBook }) {
   const slides = [
     {
       image: '/assets/Work/1 (1).JPEG',
-      title: 'Where Feelings Turn into Expression',
+      title: 'Transform Your Vision Into Permanent Art',
       subtitle: "Silchar's Premier Tattoo Studio",
     },
     {
@@ -24,7 +24,7 @@ export default function HeroSlider({ onBook }) {
   ];
 
   return (
-    <section className="relative h-[45vh] md:h-[65vh] overflow-hidden bg-black">
+    <section className="relative h-[45vh] md:h-[65vh] overflow-hidden" style={{backgroundColor: '#000a1a'}}>
       <Swiper
         modules={[Autoplay, Pagination, EffectFade]}
         effect="fade"
@@ -55,31 +55,32 @@ export default function HeroSlider({ onBook }) {
         <div className="h-full max-w-6xl mx-auto grid md:grid-cols-[1.2fr_0.95fr] items-center gap-6 px-6 md:px-10 lg:px-12">
           <div className="space-y-4 md:space-y-5 animate-[revealUp_1s_ease_forwards] opacity-0 translate-y-6">
             <p className="font-body text-xs md:text-sm uppercase tracking-[0.3em] text-white/70 font-semibold">SILCHAR'S PREMIER TATTOO STUDIO</p>
-            <h1 className="font-heading leading-none text-4xl md:text-6xl lg:text-7xl uppercase drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]" style={{letterSpacing: '2px'}}>
-              <span className="block text-white md:text-[#f8f7ef]">Where Feelings Turn into</span>
-              <span className="block text-[#39d67f]">Expression</span>
+            <h1 className="font-spartan font-extrabold leading-none text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]" style={{letterSpacing: '1px'}}>
+              <span className="block text-white md:text-[#f8f7ef]">Transform Your Vision Into</span>
+              <span className="block text-[#39d67f]">Permanent Art</span>
             </h1>
             <p className="font-body text-white/80 text-base md:text-lg max-w-2xl" style={{lineHeight: '1.65'}}>
-              Mastering portraits and religious tattoos with unmatched hygiene standards.
+              Specialists in Hyper-Realistic Portraits & Custom Religious Art. 100% Safe & Hygienic Process.
             </p>
             <div className="flex flex-wrap gap-3 md:gap-4 pt-2">
               <button
                 onClick={onBook}
-                className="btn-orange btn-glow-orange text-sm md:text-base px-6 md:px-7 py-3 md:py-3.5"
+                className="btn-darkblue text-sm md:text-base px-6 md:px-7 py-3 md:py-3.5"
               >
-                BOOK NOW
+                Book Appointment
               </button>
               <a
                 href="https://wa.me/917099725127"
-                className="btn-darkblue text-sm md:text-base px-6 md:px-7 py-3 md:py-3.5 border border-white/10"
+                className="btn-darkblue text-sm md:text-base px-6 md:px-7 py-3 md:py-3.5"
               >
-                WhatsApp Us
+                Contact Now
               </a>
             </div>
           </div>
 
           <div className="justify-self-end w-full md:w-[92%] max-w-lg">
-            <div className="glass-dark border border-white/5 bg-black/55 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.55)] p-5 md:p-6">
+            <div className="p-1 rounded-3xl" style={{background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6))', boxShadow: '0 0 40px rgba(255, 255, 255, 0.2)'}}>
+              <div className="glass-dark bg-black/55 rounded-2xl shadow-[0_20px_60px_rgba(0,0,0,0.55)] p-5 md:p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg md:text-xl font-semibold" style={{ color: '#f6c443' }}>
                   Featured Artists
@@ -96,6 +97,7 @@ export default function HeroSlider({ onBook }) {
                   </button>
                 ))}
               </div>
+            </div>
             </div>
           </div>
         </div>

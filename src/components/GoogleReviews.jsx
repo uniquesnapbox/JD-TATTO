@@ -48,7 +48,7 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section className="section-pad bg-gradient-to-b from-black to-darkblue/20">
+    <section className="section-pad" style={{background: 'linear-gradient(to bottom, #000a1a, rgba(10, 10, 20, 0.6))'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

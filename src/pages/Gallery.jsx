@@ -33,7 +33,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16" style={{backgroundColor: '#000a1a'}}>
       <div className="section-pad">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

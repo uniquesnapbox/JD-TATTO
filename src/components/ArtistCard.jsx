@@ -14,7 +14,7 @@ export default function ArtistCard({ name, title, bio, image, instagram }) {
           alt={name}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
-        <div className="absolute inset-0 bg-[#05007f]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-screen" />
+        <div className="absolute inset-0 bg-[#050551]/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-screen" />
 
         {/* Overlay text inside image */}
         <div className="absolute inset-0 flex items-end">

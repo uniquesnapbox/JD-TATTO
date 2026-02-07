@@ -57,7 +57,7 @@ export default function BookingForm() {
   };
 
   return (
-    <section className="section-pad bg-black">
+    <section className="section-pad" style={{backgroundColor: '#000a1a'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <div className="flex items-center justify-center mb-3">

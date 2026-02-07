@@ -13,12 +13,13 @@ export default {
         teal: '#14B8A6',
         ember: '#FFA500',
         orange: '#ea700d',
-        darkblue: '#05007f',
+        darkblue: '#050551',
       },
       fontFamily: {
         heading: ['Bebas Neue', 'Impact', 'sans-serif'],
         body: ['Inter', 'system-ui', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        spartan: ['League Spartan', 'sans-serif'],
       },
       boxShadow: {
         neon: '0 10px 30px rgba(20, 184, 166, 0.35)',

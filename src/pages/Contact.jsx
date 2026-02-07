@@ -7,7 +7,25 @@ const InstagramIcon = () => <svg className="w-6 h-6 text-orange" fill="currentCo
 const FacebookIcon = () => <svg className="w-6 h-6 text-orange" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>;
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', whatsapp: '', message: '' });
+  const services = [
+    'Tattoo Design',
+    'Piercing',
+    'Dreadlock',
+    'Microblading PMU',
+    'Lips Blushing PMU',
+    'Lashes Extension',
+    '3D Tattoo',
+    'Cover Up Tattoo',
+  ];
+
+  const [form, setForm] = useState({ 
+    name: '', 
+    whatsapp: '', 
+    email: '', 
+    address: '',
+    service: '',
+    message: '' 
+  });
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -16,92 +34,140 @@ export default function Contact() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.whatsapp || !form.message) return;
-    const text = `Hello JD Tattoos,\n\nName: ${form.name}\nEmail: ${form.email}\nWhatsApp: ${form.whatsapp}\nMessage: ${form.message}`;
+    if (!form.name || !form.email || !form.whatsapp || !form.message || !form.service) return;
+    const text = `Hello JD Tattoos,\n\nName: ${form.name}\nWhatsApp: ${form.whatsapp}\nEmail: ${form.email}\nAddress: ${form.address}\nService: ${form.service}\nMessage: ${form.message}`;
     const url = `https://wa.me/917099725127?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
-    setForm({ name: '', email: '', whatsapp: '', message: '' });
+    setForm({ name: '', whatsapp: '', email: '', address: '', service: '', message: '' });
   };
 
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen" style={{backgroundColor: '#000a1a'}}>
       <div className="section-pad max-w-7xl mx-auto space-y-12">
       {/* Header */}
-      <div className="text-center space-y-3">
-        <h1 className="text-4xl md:text-5xl font-black text-white tracking-wide">CONTACT US</h1>
-        <p className="text-white/70 text-lg">We are here to help you get your dream tattoo.</p>
+      <div className="text-center space-y-4 mb-6">
+        <div className="inline-block">
+          <h1 className="text-5xl md:text-6xl font-black text-white tracking-widest" style={{letterSpacing: '3px', textShadow: '0 10px 40px rgba(255,140,0,0.15)'}}>CONTACT US</h1>
+        </div>
+        <p className="text-white/60 text-lg md:text-xl font-light tracking-wide">Professional Tattoo & Beauty Services at Your Fingertips</p>
+        <div className="w-24 h-1 mx-auto rounded-full" style={{background: 'linear-gradient(90deg, transparent, #FF8C00, transparent)'}}></div>
       </div>
 
       {/* Split Grid */}
       <div className="grid md:grid-cols-2 gap-8">
         {/* Left: Contact Info */}
-        <div className="card-surface p-8 border border-white/10 rounded-2xl hover:border-darkblue/60 transition-all duration-300">
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <PhoneIcon />
-              <a href="tel:+917099725127" className="text-white/90 hover:text-orange font-semibold">+91 70997 25127</a>
+        <div className="p-1 rounded-3xl" style={{background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.55))'}}>
+          <div className="card-surface p-8 border-0 rounded-2xl flex flex-col justify-center">
+            <div className="space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center flex-shrink-0 mt-1">
+                <PhoneIcon />
+              </div>
+              <div>
+                <p className="text-white/60 text-sm uppercase tracking-wide mb-1">Phone</p>
+                <a href="tel:+917099725127" className="text-white text-lg hover:text-orange transition font-semibold">+91 70997 25127</a>
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <MailIcon />
-              <a href="mailto:jdtattoos@gmail.com" className="text-white/90 hover:text-orange font-semibold">jdtattoos@gmail.com</a>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center flex-shrink-0 mt-1">
+                <MailIcon />
+              </div>
+              <div>
+                <p className="text-white/60 text-sm uppercase tracking-wide mb-1">Email</p>
+                <a href="mailto:jdtattoos@gmail.com" className="text-white text-lg hover:text-orange transition font-semibold">jdtattoos@gmail.com</a>
+              </div>
             </div>
-            <div className="flex items-center gap-3">
-              <LocationIcon />
-              <p className="text-white/80">Meherpur, Silchar, Assam</p>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-orange/10 border border-orange/30 flex items-center justify-center flex-shrink-0 mt-1">
+                <LocationIcon />
+              </div>
+              <div>
+                <p className="text-white/60 text-sm uppercase tracking-wide mb-1">Location</p>
+                <p className="text-white text-lg font-semibold">Meherpur, Silchar, Assam</p>
+              </div>
             </div>
 
-            <div className="pt-4">
-              <h3 className="text-white font-bold mb-3">Follow Us</h3>
+            <div className="pt-6 border-t border-white/10">
+              <h3 className="text-white font-bold mb-4 uppercase tracking-wide">Follow Us</h3>
               <div className="flex items-center gap-4">
-                <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/20 hover:border-orange/70 hover:bg-white/10 transition">
+                <a href="https://instagram.com/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/20 hover:border-orange hover:bg-orange/10 transition">
                   <InstagramIcon />
                 </a>
-                <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/20 hover:border-orange/70 hover:bg-white/10 transition">
+                <a href="https://facebook.com/" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/5 border border-white/20 hover:border-orange hover:bg-orange/10 transition">
                   <FacebookIcon />
                 </a>
               </div>
             </div>
           </div>
         </div>
+        </div>
 
-        {/* Right: Form */}
-        <div className="card-surface p-8 border border-white/10 rounded-2xl hover:border-orange/60 transition-all duration-300">
-          <form onSubmit={onSubmit} className="space-y-5">
-            <div>
-              <label className="block text-white font-semibold mb-2">Full Name</label>
-              <input name="name" value={form.name} onChange={onChange} required type="text" placeholder="Your name" className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-orange/60 focus:bg-white/10 transition" />
-            </div>
-            <div>
-              <label className="block text-white font-semibold mb-2">Email</label>
-              <input name="email" value={form.email} onChange={onChange} required type="email" placeholder="your@email.com" className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-orange/60 focus:bg-white/10 transition" />
-            </div>
-            <div>
-              <label className="block text-white font-semibold mb-2">WhatsApp Number</label>
-              <input name="whatsapp" value={form.whatsapp} onChange={onChange} required type="tel" placeholder="+91 XXXXX XXXXX" className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-orange/60 focus:bg-white/10 transition" />
-            </div>
-            <div>
-              <label className="block text-white font-semibold mb-2">Write your message</label>
-              <textarea name="message" value={form.message} onChange={onChange} required rows={5} placeholder="Tell us what you want..." className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-orange/60 focus:bg-white/10 transition" />
-            </div>
-            <button type="submit" className="w-full bg-orange text-black font-bold py-4 rounded-lg text-lg hover:bg-orange/90 transition hover:shadow-[0_20px_40px_rgba(234,112,13,0.3)]">SEND MESSAGE</button>
-          </form>
+        {/* Right: Form - Premium Design with White Border */}
+        <div className="p-1.5 rounded-3xl" style={{background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.7))'}}>
+          <div className="card-surface p-8 border-0 rounded-2xl">
+            <form onSubmit={onSubmit} className="space-y-5">
+              <div>
+                <label className="block text-white font-bold mb-2 uppercase tracking-widest text-xs">Full Name</label>
+                <input name="name" value={form.name} onChange={onChange} required type="text" placeholder="Your full name" className="w-full bg-[#0A0A0A] border-2 border-white/25 rounded-lg px-4 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-white focus:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition-all duration-300" />
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-white font-bold mb-2 uppercase tracking-widest text-xs">WhatsApp Number</label>
+                  <input name="whatsapp" value={form.whatsapp} onChange={onChange} required type="tel" placeholder="+91 XXXXX XXXXX" className="w-full bg-[#0A0A0A] border-2 border-white/25 rounded-lg px-4 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-white focus:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition-all duration-300" />
+                </div>
+                <div>
+                  <label className="block text-white font-bold mb-2 uppercase tracking-widest text-xs">Email ID</label>
+                  <input name="email" value={form.email} onChange={onChange} required type="email" placeholder="your@email.com" className="w-full bg-[#0A0A0A] border-2 border-white/25 rounded-lg px-4 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-white focus:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition-all duration-300" />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-white font-bold mb-2 uppercase tracking-widest text-xs">Full Address</label>
+                <input name="address" value={form.address} onChange={(e) => setForm({...form, address: e.target.value})} type="text" placeholder="City, State, Country" className="w-full bg-[#0A0A0A] border-2 border-white/25 rounded-lg px-4 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-white focus:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition-all duration-300" />
+              </div>
+
+              <div>
+                <label className="block text-white font-bold mb-2 uppercase tracking-widest text-xs">Select Service</label>
+                <select name="service" value={form.service} onChange={onChange} required className="w-full bg-[#0A0A0A] border-2 border-white/25 rounded-lg px-4 py-3.5 text-white focus:outline-none focus:border-white focus:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition-all duration-300 cursor-pointer hover:border-white/50 appearance-none" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23FFFFFF' d='M6 9L1 4h10z'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem center', paddingRight: '2.5rem'}}>
+                  <option value="">Choose a service...</option>
+                  {services.map((svc) => (
+                    <option key={svc} value={svc} style={{backgroundColor: '#0A0A0A', color: '#FFFFFF'}}>
+                      {svc}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="block text-white font-bold mb-2 uppercase tracking-widest text-xs">Message</label>
+                <textarea name="message" value={form.message} onChange={onChange} required rows={4} placeholder="Tell us about your tattoo idea, design preference, or any specific requirements..." className="w-full bg-[#0A0A0A] border-2 border-white/25 rounded-lg px-4 py-3.5 text-white placeholder-white/30 focus:outline-none focus:border-white focus:shadow-[0_0_30px_rgba(255,255,255,0.35)] transition-all duration-300 resize-none" />
+              </div>
+
+              <button type="submit" className="w-full bg-gradient-to-r from-orange to-[#FF9B21] text-black font-extrabold py-4 rounded-lg text-lg uppercase tracking-widest hover:shadow-[0_25px_70px_rgba(255,140,0,0.7)] active:scale-95 transition-all duration-200 hover:from-[#FF9B21] hover:to-orange border border-orange/20">
+                GET FREE QUOTE
+              </button>
+            </form>
+          </div>
         </div>
       </div>
 
       {/* Map */}
-      <div className="mt-10">
-        <h3 className="text-white font-bold mb-4">Find Us</h3>
-        <div className="rounded-2xl overflow-hidden border border-white/10">
-          <div style={{ filter: 'grayscale(1) invert(1) contrast(1.2)' }}>
-            <iframe
-              title="JD Tattoos Location"
-              src="https://www.google.com/maps?q=Meherpur%2C%20Silchar%2C%20Assam&output=embed"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+      <div className="mt-12">
+        <h3 className="text-white font-bold text-2xl mb-6 uppercase tracking-widest">FIND US ON MAP</h3>
+        <div className="p-1 rounded-3xl" style={{background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 140, 0, 0.1))'}}>
+          <div className="rounded-2xl overflow-hidden border border-white/5">
+            <div style={{ filter: 'grayscale(1) invert(1) contrast(1.2)' }}>
+              <iframe
+                title="JD Tattoos Location"
+                src="https://www.google.com/maps?q=Meherpur%2C%20Silchar%2C%20Assam&output=embed"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>

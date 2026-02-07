@@ -48,7 +48,7 @@ export default function About({ onBook }) {
   ];
 
   return (
-    <div className="space-y-16 bg-black">
+    <div className="space-y-16" style={{backgroundColor: '#000a1a'}}>
       <div className="section-pad max-w-6xl mx-auto space-y-10">
         <div className="text-center space-y-4">
           <h1 className="font-heading text-5xl md:text-6xl uppercase tracking-wide text-white">About JD Tattoos Studio</h1>
@@ -75,7 +75,7 @@ export default function About({ onBook }) {
       <GoogleReviews />
 
       {/* Meet Our Artist Section */}
-      <section className="section-pad bg-black">
+      <section className="section-pad" style={{backgroundColor: '#000a1a'}}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 space-y-3">

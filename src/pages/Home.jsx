@@ -44,16 +44,16 @@ export default function Home({ onBook }) {
   ];
 
   return (
-    <div className="space-y-16 bg-black">
+    <div className="space-y-16" style={{backgroundColor: '#000a1a'}}>
       <HeroSlider onBook={onBook} />
 
-      <section className="section-pad bg-gradient-to-b from-black via-[#050505] to-black">
+      <section className="section-pad" style={{background: 'linear-gradient(to bottom, #000a1a, #0a0a14, #000a1a)'}}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-wide text-white">Our Services</h2>
             <p className="font-body text-white/70 mt-3 text-lg" style={{lineHeight: '1.5'}}>Pick your style, we will perfect it.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, idx) => (
               <div
                 key={service.title}
@@ -69,7 +69,7 @@ export default function Home({ onBook }) {
         </div>
       </section>
 
-      <section className="section-pad bg-black">
+      <section className="section-pad" style={{backgroundColor: '#000a1a'}}>
         <div className="max-w-7xl mx-auto text-center space-y-10">
           <div>
             <h2 className="font-heading text-4xl md:text-5xl uppercase tracking-wide text-white">Why Choose JD Tattoos?</h2>

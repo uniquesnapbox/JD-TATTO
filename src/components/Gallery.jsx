@@ -45,7 +45,7 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section className="section-pad bg-black">
+    <section className="section-pad" style={{backgroundColor: '#000a1a'}}>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-3">Our Gallery</h2>
