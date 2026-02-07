@@ -48,9 +48,9 @@ export default function Services({ onBook }) {
             className="card-surface p-6 border border-white/10 hover:border-orange/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange/20 animate-fadeUp"
             style={{ animationDelay: `${idx * 90}ms` }}
           >
-            <div className="text-3xl mb-3">{service.icon}</div>
-            <h3 className="text-lg font-bold text-orange mt-3">{service.title}</h3>
-            <p className="text-white/70 text-sm mt-2 leading-relaxed">{service.desc}</p>
+            <div className="text-xl mb-3">{service.icon}</div>
+            <h3 className="text-base font-bold text-orange mt-3">{service.title}</h3>
+            <p className="text-white/70 text-xs mt-2 leading-relaxed">{service.desc}</p>
           </div>
         ))}
       </div>

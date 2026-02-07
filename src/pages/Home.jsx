@@ -60,9 +60,9 @@ export default function Home({ onBook }) {
                 className="card-surface glass-dark p-6 border border-white/10 hover:border-orange/60 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(234,112,13,0.2)] animate-fadeUp"
                 style={{ animationDelay: `${idx * 120}ms` }}
               >
-                <div className="text-2xl">{service.icon}</div>
-                <h3 className="font-body text-lg font-semibold text-orange mt-3">{service.title}</h3>
-                <p className="font-body text-white/70 text-sm mt-2" style={{lineHeight: '1.5'}}>{service.desc}</p>
+                <div className="text-xl">{service.icon}</div>
+                <h3 className="font-body text-base font-semibold text-orange mt-3">{service.title}</h3>
+                <p className="font-body text-white/70 text-xs mt-2" style={{lineHeight: '1.5'}}>{service.desc}</p>
               </div>
             ))}
           </div>
